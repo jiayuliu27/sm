@@ -1,0 +1,1 @@
+'digraph "fsm" {\n  "idle";\n  "read";\n  "write";\n  "update";\n  "thrash";\n  "read" -> "write" [label=" step " ];\n  "read" -> "update" [ label=" step " ];\n  "update" -> "write" [ label=" step "];\n  "read" -> "idle" [ label=" reset " ];\n  "write" -> "idle" [ label=" reset " ];\n  "update" -> "idle" [ label=" reset " ];\n  "thrash" -> "idle" [ label=" reset " ];\n}'
